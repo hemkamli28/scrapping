@@ -1,5 +1,32 @@
-import { KeyValueStore } from "crawlee";
+import fs from 'fs';
 
+export const writeFileAsync = async ( path, jsonString) => {
+  try {
+      await fs.promises.writeFile(path, jsonString);
+      console.log('Successfully wrote file');
+  } catch (err) {
+      console.error('Error writing file', err);
+  }
+};
+
+export const readFile = async(filePath)=>{
+  try {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading the file:', err);
+                reject(err); // Reject the promise if there's an error
+                return;
+            }
+            console.log('File contents:', data);
+            resolve(data); // Resolve the promise with the file data
+        });
+    });
+} catch (err) {
+    console.error('Error reading file', err);
+    throw err; // Rethrow the error to propagate it further
+}
+}
 export const locateAndClick = async (page, xpath) => {
   try {
     console.log("locating and clicking....");
@@ -22,17 +49,17 @@ export const waitForRender = async (page, selector) => {
   }
 };
 
-export const getInputAndFill = async (page, input) => {
+export const getInputAndFill = async (page, parsedData) => {
   try {
     console.log("Entering From & To...");
-    console.log(input);
-    await page.getByPlaceholder("From").fill(input.source);
+    console.log(parsedData);
+    await page.getByPlaceholder("From").fill(parsedData.source);
     await page.waitForTimeout(1000);
 
     await page.keyboard.press("ArrowDown");
     await page.keyboard.press("Tab");
 
-    await page.getByPlaceholder("To").fill(input.dest);
+    await page.getByPlaceholder("To").fill(parsedData.dest);
     await page.waitForTimeout(1000);
 
     await page.keyboard.press("ArrowDown");
@@ -57,7 +84,7 @@ export const scrollBottom = async (page) => {
   }
 };
 
-export const fetchDetails = async (page, input) => {
+export const fetchDetails = async (page, parsedData) => {
   try {
     const airlineNames = await page.$$eval(".airlineName", (els) => {
       return els.map((el) => el.textContent);
@@ -78,8 +105,6 @@ export const fetchDetails = async (page, input) => {
     });
     let details = [];
     let detail = {
-      source: "",
-      destination: "",
       airline: "",
       ETA: "",
       DT: "",
@@ -89,8 +114,6 @@ export const fetchDetails = async (page, input) => {
 
     for (let i = 0; i < DT.length; i++) {
       detail = {
-        source: input.source,
-        destination: input.dest,
         airline: airlineNames[i],
         ETA: ETA[i],
         DT: DT[i],
@@ -107,9 +130,9 @@ export const fetchDetails = async (page, input) => {
   }
 };
 
-export const formatDate = async (input) => {
+export const formatDate = async (parsedData) => {
   try {
-    const date = input.date;
+    const date = parsedData.date;
     const monthNumber = date.slice(3, 5);
     const year = date.slice(6, 10);
     let monthName;
@@ -191,9 +214,9 @@ export const searchByDiv = async (page,searchText, parentDivSelector) => {
   }
 };
 
-export const getDate = async(input)=>{
+export const getDate = async(parsedData)=>{
   try {
-    const day = input.date.slice(0,2);
+    const day = parsedData.date.slice(0,2);
     return day;
   } catch (error) {
     console.log(error)

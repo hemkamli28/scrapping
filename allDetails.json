@@ -1,0 +1,298 @@
+{
+  "details": [
+    {
+      "airline": "IndiGo",
+      "ETA": "23:05",
+      "DT": "19:05",
+      "price": "₹ 4,067",
+      "duration": "04 h 1 st"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "10:50",
+      "DT": "09:05",
+      "price": "₹ 5,583",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "20:55",
+      "DT": "18:50",
+      "price": "₹ 5,583",
+      "duration": "02 h 05 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "23:25",
+      "DT": "21:30",
+      "price": "₹ 5,583",
+      "duration": "01 h 55 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "19:30",
+      "DT": "17:45",
+      "price": "₹ 5,594",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "00:15+ 1 DAY",
+      "DT": "22:20",
+      "price": "₹ 5,594",
+      "duration": "01 h 55 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "08:50",
+      "DT": "07:00",
+      "price": "₹ 6,108",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "13:05",
+      "DT": "08:20",
+      "price": "₹ 6,122",
+      "duration": "04 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "07:45",
+      "DT": "06:05",
+      "price": "₹ 6,129",
+      "duration": "01 h 40 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "09:15",
+      "DT": "07:30",
+      "price": "₹ 6,129",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "10:45",
+      "DT": "09:05",
+      "price": "₹ 6,129",
+      "duration": "01 h 40 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "13:15",
+      "DT": "11:30",
+      "price": "₹ 6,129",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "14:30",
+      "DT": "12:45",
+      "price": "₹ 6,129",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "15:35",
+      "DT": "13:45",
+      "price": "₹ 6,129",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "18:25",
+      "DT": "16:30",
+      "price": "₹ 6,129",
+      "duration": "01 h 55 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "19:45",
+      "DT": "18:00",
+      "price": "₹ 6,129",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "21:05",
+      "DT": "19:15",
+      "price": "₹ 6,129",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "22:05",
+      "DT": "20:30",
+      "price": "₹ 6,129",
+      "duration": "01 h 35 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "23:30",
+      "DT": "21:45",
+      "price": "₹ 6,129",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Star Air",
+      "ETA": "18:10",
+      "DT": "09:30",
+      "price": "₹ 6,165",
+      "duration": "08 h 40 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "19:15",
+      "DT": "17:30",
+      "price": "₹ 6,213",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "17:10",
+      "DT": "15:15",
+      "price": "₹ 6,549",
+      "duration": "01 h 55 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "01:15+ 1 DAY",
+      "DT": "23:30",
+      "price": "₹ 6,549",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "17:45",
+      "DT": "16:00",
+      "price": "₹ 6,843",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "15:55",
+      "DT": "11:25",
+      "price": "₹ 7,209",
+      "duration": "04 h 30 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "04:10",
+      "DT": "02:30",
+      "price": "₹ 7,914",
+      "duration": "01 h 40 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "12:00",
+      "DT": "10:15",
+      "price": "₹ 7,914",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "05:45",
+      "DT": "04:00",
+      "price": "₹ 7,946",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "08:35",
+      "DT": "06:40",
+      "price": "₹ 7,946",
+      "duration": "01 h 55 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "11:15",
+      "DT": "09:25",
+      "price": "₹ 7,946",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "18:30",
+      "DT": "16:40",
+      "price": "₹ 7,946",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "20:40",
+      "DT": "18:50",
+      "price": "₹ 7,946",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "Air India",
+      "ETA": "12:10",
+      "DT": "05:15",
+      "price": "₹ 7,983",
+      "duration": "06 h 55 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "07:45",
+      "DT": "06:00",
+      "price": "₹ 7,998",
+      "duration": "01 h 45 m"
+    },
+    {
+      "airline": "Vistara",
+      "ETA": "21:40",
+      "DT": "15:35",
+      "price": "₹ 8,177",
+      "duration": "06 h 05 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "02:25",
+      "DT": "00:35",
+      "price": "₹ 11,832",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "11:05",
+      "DT": "09:25",
+      "price": "₹ 11,832",
+      "duration": "01 h 40 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "23:15",
+      "DT": "21:25",
+      "price": "₹ 11,832",
+      "duration": "01 h 50 m"
+    },
+    {
+      "airline": "IndiGo",
+      "ETA": "02:10+ 1 DAY",
+      "DT": "21:30",
+      "price": "₹ 12,378",
+      "duration": "04 h 40 m"
+    },
+    {
+      "airline": "Akasa Air",
+      "ETA": "01:45+ 1 DAY",
+      "DT": "23:55",
+      "price": "₹ 12,805",
+      "duration": "01 h 50 m"
+    }
+  ],
+  "fast": {
+    "airline": "IndiGo",
+    "ETA": "23:05",
+    "DT": "19:05",
+    "price": "₹ 4,067",
+    "duration": "04 h 1 st"
+  },
+  "cheapest": {
+    "airline": "Vistara",
+    "ETA": "10:50",
+    "DT": "09:05",
+    "price": "₹ 5,583",
+    "duration": "01 h 45 m"
+  }
+}

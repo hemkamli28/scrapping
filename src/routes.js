@@ -1,5 +1,5 @@
 import { Dataset, createPlaywrightRouter } from "crawlee";
-import { KeyValueStore } from "crawlee";
+import { readFile, writeFileAsync } from "./functions.js";
 import {
   dateClick,
   fetchDetails,
@@ -12,11 +12,14 @@ import {
   waitForRender,
 } from "./functions.js";
 export const router = createPlaywrightRouter();
-router.addDefaultHandler(async ({ page, log }) => {
+router.addDefaultHandler(async ({ page, log}) => {
   log.info(`enqueueing new URLs`);
-  await page.waitForTimeout(3860);
-  await page.screenshot({ path: "screenshotstart.png" });
+  await page.waitForTimeout(4000);
   await page.mouse.click(100, 200);
+
+  const fd = await readFile('./INPUT.json');
+  const parsedData = JSON.parse(fd)
+  await page.screenshot({ path: "screenshotstart.png" });
 
   await waitForRender(
     page,
@@ -27,13 +30,11 @@ router.addDefaultHandler(async ({ page, log }) => {
     '//*[@id="top-banner"]/div[2]/div/div/div/div[2]/div[1]/div[1]'
   );
 
-  const input = await KeyValueStore.getInput();
-  console.log(input);
   //map input object
-  await getInputAndFill(page, input);
+  await getInputAndFill(page, parsedData);
   await page.waitForTimeout(1000);
-  const searchText = await formatDate(input);
-  const day = await getDate(input);
+  const searchText = await formatDate(parsedData);
+  const day = await getDate(parsedData);
   await page.waitForTimeout(2000);
 
   while (
@@ -64,16 +65,28 @@ router.addDefaultHandler(async ({ page, log }) => {
   await page.waitForTimeout(1000);
   await scrollBottom(page);
 
-  const details = await fetchDetails(page,input);
+  const details = await fetchDetails(page,parsedData);
   console.log(details);
-  console.log("cheapest: ", details[0]);
 
+  
   await page.locator('//*[@id="listing-id"]/div/div[1]/div/div/div[2]').click();
   await page.waitForTimeout(1000);
   await scrollBottom(page);
-
-  const fastest = await fetchDetails(page,input);
+  
+  const fastest = await fetchDetails(page,parsedData);
+  console.log("cheapest: ", details[0]);
   console.log("fastest: ", fastest[0]);
-  await Dataset.pushData(details);
-  await Dataset.exportToCSV("flightDetails");
+  const fc = {
+    details: details,
+    fast:details[0],
+    cheapest:fastest[0]
+  }
+  const jsonData = JSON.stringify(fc, null, 2);
+
+  writeFileAsync('./allDetails.json', jsonData);
+
+  console.log("FXC: ",fc );
+  // await Dataset.pushData(details);
+  // await Dataset.exportToCSV("flightDetails");
+  // await Dataset.exportToJSON("flightDetails");
 });
